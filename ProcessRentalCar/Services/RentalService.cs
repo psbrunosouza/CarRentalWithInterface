@@ -29,7 +29,7 @@ namespace ProcessRentalCar.Services {
                 basicPayment = PricePerHour * Math.Ceiling(duration.TotalHours);
             }
             else {
-                basicPayment = PricePerDay * Math.Ceiling(duration.TotalHours);
+                basicPayment = PricePerDay * Math.Ceiling(duration.TotalDays);
             }
 
             double tax = _taxService.Tax(basicPayment);
