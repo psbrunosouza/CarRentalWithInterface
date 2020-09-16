@@ -32,7 +32,7 @@ namespace ProcessRentalCar.Services {
                 basicPayment = PricePerDay * Math.Ceiling(duration.TotalHours);
             }
 
-            double tax = _brasilTaxService.Tax(basicPayment);
+            double tax = _taxService.Tax(basicPayment);
             carRental.Invoice = new Invoice(basicPayment, tax);
 
         }
